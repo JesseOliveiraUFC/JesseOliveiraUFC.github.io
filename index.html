@@ -62,6 +62,11 @@
         <div class="container">
             <h2 class="section-title">Sobre <span class="text-accent">mim</span></h2>
             <div class="about-grid">
+                <div class="about-photo">
+                    <div class="photo-frame">
+                        <img src="foto.png" alt="Jessé Oliveira" class="profile-photo">
+                    </div>
+                </div>
                 <div class="about-text">
                     <p>Profissional de dados com mais de <strong>5 anos de experiência</strong>, incluindo 3 anos como Cientista de Dados. Comprovada capacidade de projetar e manter pipelines de dados escaláveis, aplicar modelos de machine learning a problemas reais e entregar soluções analíticas de alta qualidade.</p>
                     <p>Forte raciocínio lógico e analítico, com experiência em ambientes de nuvem (<strong>GCP, Azure, AWS</strong>) e atuação em projetos de Inteligência Artificial, incluindo agentes de IA, RAG, embeddings e Large Language Models.</p>
@@ -70,9 +75,68 @@
                             <span class="stat-number">5+</span>
                             <span class="stat-label">Anos de experiência</span>
                         </div>
-                        <div class="stat">
+                        <div class="stat stat-clients" id="statClients" title="Ver clientes">
                             <span class="stat-number">10+</span>
-                            <span class="stat-label">Clientes atendidos</span>
+                            <span class="stat-label">
+                                Clientes atendidos
+                                <svg class="stat-hint-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                            </span>
+                            <div class="clients-tooltip" id="clientsTooltip">
+                                <p class="tooltip-title">Principais clientes</p>
+                                <div class="clients-logos">
+                                    <!-- Row 1: destaque -->
+                                    <div class="client-item">
+                                        <img src="logos/rede-globo.jpg" alt="Rede Globo" class="logo-fit">
+                                        <span>Rede Globo</span>
+                                    </div>
+                                    <div class="client-item">
+                                        <img src="logos/banco-do-brasil.png" alt="Banco do Brasil" class="logo-fit">
+                                        <span>Banco do Brasil</span>
+                                    </div>
+                                    <div class="client-item">
+                                        <img src="logos/itau.png" alt="Itaú Unibanco" class="logo-fit">
+                                        <span>Itaú Unibanco</span>
+                                    </div>
+                                    <div class="client-item">
+                                        <img src="logos/amway.png" alt="Amway Global">
+                                        <span>Amway Global</span>
+                                    </div>
+                                    <!-- Row 2 -->
+                                    <div class="client-item">
+                                        <img src="logos/cimed.png" alt="CIMED" class="logo-clean">
+                                        <span>CIMED</span>
+                                    </div>
+                                    <div class="client-item">
+                                        <img src="logos/cogna.png" alt="Cogna Educação" class="logo-fit">
+                                        <span>Cogna Educação</span>
+                                    </div>
+                                    <div class="client-item">
+                                        <img src="logos/pagbank.png" alt="PagBank" class="logo-clean">
+                                        <span>PagBank</span>
+                                    </div>
+                                    <div class="client-item">
+                                        <img src="logos/estee-lauder.png" alt="Estée Lauder">
+                                        <span>Estée Lauder</span>
+                                    </div>
+                                    <!-- Row 3 -->
+                                    <div class="client-item">
+                                        <img src="logos/tjpe.png" alt="TJ de Pernambuco" class="logo-clean">
+                                        <span>TJ do Recife</span>
+                                    </div>
+                                    <div class="client-item">
+                                        <img src="logos/leo-madeiras.png" alt="Leo Madeiras" class="logo-fit">
+                                        <span>Leo Madeiras</span>
+                                    </div>
+                                    <div class="client-item">
+                                        <img src="logos/malwee.png" alt="Malwee" class="logo-clean">
+                                        <span>Malwee</span>
+                                    </div>
+                                    <div class="client-item">
+                                        <img src="logos/piracanjuba.png" alt="Piracanjuba" class="logo-fit">
+                                        <span>Piracanjuba</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="stat">
                             <span class="stat-number">3</span>
@@ -494,7 +558,7 @@
                     <p class="contact-intro">Estou disponível para oportunidades em engenharia de dados, IA e ciência de dados. Entre em contato!</p>
                 </div>
                 <div class="contact-cards">
-                    <a href="mailto:jesse.oliveira@fisica.ufc.br" class="contact-card" data-animate>
+                    <a href="mailto:jesse.oliveira@fisica.ufc.br" class="contact-card contact-card--featured" data-animate>
                         <div class="contact-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                         </div>
