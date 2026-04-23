@@ -44,16 +44,6 @@ const revealObserver = new IntersectionObserver(
 
 document.querySelectorAll('[data-animate]').forEach(el => revealObserver.observe(el));
 
-// Clients tooltip: toggle on click (for touch/mobile), hover handled by CSS
-const statClients = document.getElementById('statClients');
-if (statClients) {
-    statClients.addEventListener('click', (e) => {
-        e.stopPropagation();
-        statClients.classList.toggle('open');
-    });
-    document.addEventListener('click', () => statClients.classList.remove('open'));
-}
-
 // Active nav link highlight on scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks  = document.querySelectorAll('a.nav-link');

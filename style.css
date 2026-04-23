@@ -384,85 +384,50 @@ body {
     letter-spacing: 0.06em;
 }
 
-/* Clients tooltip */
-.stat-clients {
-    position: relative;
-    cursor: pointer;
-    user-select: none;
+/* === Clients showcase === */
+.clients-showcase {
+    margin-top: 56px;
+    padding-top: 44px;
+    border-top: 1px solid var(--border);
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.stat-clients .stat-label {
+.clients-showcase.visible {
+    opacity: 1;
+    transform: none;
+}
+
+.clients-showcase-header {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 12px;
+    margin-bottom: 28px;
 }
 
-.stat-hint-icon {
-    color: var(--accent);
-    opacity: 0.7;
-    flex-shrink: 0;
-    transition: opacity var(--ease);
+.clients-showcase-count {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.stat-clients:hover .stat-hint-icon,
-.stat-clients.open .stat-hint-icon {
-    opacity: 1;
-}
-
-.clients-tooltip {
-    position: absolute;
-    bottom: calc(100% + 14px);
-    left: 50%;
-    transform: translateX(-50%) translateY(6px);
-    width: 680px;
-    max-width: calc(100vw - 32px);
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 24px 24px 20px;
-    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(79,142,247,.12);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.22s ease, transform 0.22s ease;
-    z-index: 300;
-}
-
-/* Arrow */
-.clients-tooltip::after {
-    content: '';
-    position: absolute;
-    bottom: -7px;
-    left: 50%;
-    transform: translateX(-50%) rotate(45deg);
-    width: 12px;
-    height: 12px;
-    background: var(--card);
-    border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-}
-
-.stat-clients:hover .clients-tooltip,
-.stat-clients.open .clients-tooltip {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateX(-50%) translateY(0);
-}
-
-.tooltip-title {
-    font-size: 0.72rem;
+.clients-showcase-label {
+    font-size: 0.78rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--muted);
-    margin-bottom: 14px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--border);
 }
 
 .clients-logos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px;
 }
 
 .client-item {
@@ -942,6 +907,9 @@ body {
     .btn        { justify-content: center; }
 
     .about-stats { gap: 28px; flex-wrap: wrap; }
+
+    .clients-logos { grid-template-columns: repeat(4, 1fr); }
+    .client-item img { width: 60px; height: 60px; }
 
     .timeline-header { flex-direction: column; }
     .period          { align-self: flex-start; }
